@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 )
 
 func render(w http.ResponseWriter, page string) {
@@ -71,7 +72,13 @@ func main() {
 	http.HandleFunc("/recommend", recommend)
 	http.HandleFunc("/reservation", reservation)
 
-	log.Println("Server started at http://localhost:8080")
+	port := os.Getenv("PORT")
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	if port == "" {
+		port = "8080"
+	}
+
+	log.Println("Server started on port " + port)
+
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }

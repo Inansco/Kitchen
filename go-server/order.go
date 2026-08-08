@@ -16,7 +16,6 @@ func order(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == http.MethodGet {
 
-		
 		render(w, "order.html")
 		return
 	}

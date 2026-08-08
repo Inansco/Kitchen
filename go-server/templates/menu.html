@@ -2,21 +2,227 @@
 <html>
 
 <head>
-    <title>Menu</title>
+    <title>Menu - Tasty Restaurant</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
 
-<h1>Our Menu</h1>
+<header>
+    <h1>🍽 Tasty Restaurant</h1>
 
-<ul>
-    <li>🍕 Spag & Beans - $12</li>
-    <li>🍔 Beans - N1000</li>
-    <li>🍗 Chicken - N1000</li>
-    <li>🥗 Salad - $8</li>
-</ul>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservation">Reservation</a>
+        <a href="/order">Order</a>
+        <a href="/recommend">Chef AI</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
 
-<a href="/">Back Home</a>
+<section class="container">
+
+    <h2 class="section-title">Our Nigerian Menu</h2>
+
+    <div class="menu-buttons">
+        <button onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('rice')">Rice</button>
+        <button onclick="filterMenu('soups')">Soups</button>
+        <button onclick="filterMenu('local')">Local Specials</button>
+        <button onclick="filterMenu('drinks')">Drinks</button>
+    </div>
+
+    <div class="cards">
+
+        <!-- RICE -->
+
+        <div class="card menu-item rice">
+            <img src="/static/images/jollof.jpg">
+
+            <div class="card-content">
+                <h3>Jollof Rice & Chicken</h3>
+                <p>Delicious Nigerian jollof rice served with grilled chicken.</p>
+                <p class="price">₦8,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item rice">
+            <img src="/static/images/fried-rice.jpg">
+
+            <div class="card-content">
+                <h3>Fried Rice & Chicken</h3>
+                <p>Nigerian fried rice served with juicy chicken.</p>
+                <p class="price">₦8,500</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item rice">
+            <img src="/static/images/ofada.jpg">
+
+            <div class="card-content">
+                <h3>Ofada Rice & Ayamase</h3>
+                <p>Local Ofada rice served with spicy Ayamase sauce.</p>
+                <p class="price">₦9,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <!-- SOUPS -->
+
+        <div class="card menu-item soups">
+            <img src="/static/images/egusi.jpg">
+
+            <div class="card-content">
+                <h3>Pounded Yam & Egusi</h3>
+                <p>Fresh pounded yam served with rich Egusi soup.</p>
+                <p class="price">₦7,500</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item soups">
+            <img src="/static/images/eba-okro.jpg">
+
+            <div class="card-content">
+                <h3>Eba & Okro Soup</h3>
+                <p>Soft garri Eba served with traditional Okro soup.</p>
+                <p class="price">₦6,500</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item soups">
+            <img src="/static/images/amala.jpg">
+
+            <div class="card-content">
+                <h3>Amala & Ewedu</h3>
+                <p>Traditional Amala served with Ewedu and stew.</p>
+                <p class="price">₦7,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <!-- LOCAL SPECIALS -->
+
+        <div class="card menu-item local">
+            <img src="/static/images/suya.jpg">
+
+            <div class="card-content">
+                <h3>Beef Suya</h3>
+                <p>Spicy grilled beef coated with traditional Suya spice.</p>
+                <p class="price">₦6,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item local">
+            <img src="/static/images/asun.jpg">
+
+            <div class="card-content">
+                <h3>Asun</h3>
+                <p>Spicy grilled goat meat prepared Nigerian style.</p>
+                <p class="price">₦7,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item local">
+            <img src="/static/images/pepper-soup.jpg">
+
+            <div class="card-content">
+                <h3>Pepper Soup</h3>
+                <p>Hot and spicy Nigerian pepper soup.</p>
+                <p class="price">₦5,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item local">
+            <img src="/static/images/plantain.jpg">
+
+            <div class="card-content">
+                <h3>Fried Plantain</h3>
+                <p>Sweet golden fried plantain.</p>
+                <p class="price">₦3,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <!-- DRINKS -->
+
+        <div class="card menu-item drinks">
+            <div class="card-content">
+                <h3>🥤 Chapman</h3>
+                <p>Refreshing Nigerian-style Chapman.</p>
+                <p class="price">₦3,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item drinks">
+            <div class="card-content">
+                <h3>🍷 Zobo</h3>
+                <p>Cold refreshing hibiscus drink.</p>
+                <p class="price">₦2,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item drinks">
+            <div class="card-content">
+                <h3>🥭 Fresh Fruit Juice</h3>
+                <p>Freshly prepared fruit juice.</p>
+                <p class="price">₦2,500</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+        <div class="card menu-item drinks">
+            <div class="card-content">
+                <h3>🥛 Kunu</h3>
+                <p>Traditional Nigerian millet drink.</p>
+                <p class="price">₦2,000</p>
+                <a class="order-btn" href="/order">Order Now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Tasty Restaurant</p>
+
+</footer>
+
+<script>
+
+function filterMenu(category) {
+
+    const items = document.querySelectorAll(".menu-item");
+
+    items.forEach(item => {
+
+        if (category === "all" ||
+            item.classList.contains(category)) {
+
+            item.style.display = "block";
+
+        } else {
+
+            item.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
 
 </body>
 

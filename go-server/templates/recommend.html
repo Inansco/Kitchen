@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Chef Recommendation</title>
+
+<link rel="stylesheet"
+href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🍽 Tasty Restaurant</h1>
+
+<nav>
+
+<a href="/">Home</a>
+<a href="/menu">Menu</a>
+
+</nav>
+
+</header>
+
+<section class="container">
+
+<h2>Chef Recommendation</h2>
+
+<form action="/recommend" method="POST">
+
+<input
+name="food"
+placeholder="pizza, burger, chicken...">
+
+<br><br>
+
+<button class="btn">
+Recommend
+</button>
+
+</form>
+
+{{if .}}
+
+<h2 style="margin-top:40px;">
+Recommended Meal
+</h2>
+
+<h3>{{.Meal}}</h3>
+
+<p>Best Drink: {{.Drink}}</p>
+
+{{end}}
+
+</section>
+
+</body>
+
+</html>

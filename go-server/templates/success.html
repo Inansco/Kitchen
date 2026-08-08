@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Order Successful</title>
+
+<link rel="stylesheet"
+href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<section class="container">
+
+<h1>✅ Order Received!</h1>
+
+<h2>Thank you, {{.Name}}</h2>
+
+<p>
+
+Your order for
+
+<b>{{.Quantity}}</b>
+
+<b>{{.Meal}}</b>
+
+has been received.
+
+</p>
+
+<p>
+
+We'll contact you on
+
+<b>{{.Phone}}</b>
+
+soon.
+
+</p>
+
+<br>
+
+<a class="btn" href="/">
+Back Home
+</a>
+
+</section>
+
+</body>
+
+</html>

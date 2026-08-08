@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Food</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>🍽 Tasty Restaurant</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservation">Reservation</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<section class="container">
+
+<h2>Place Your Order</h2>
+
+<form action="/order" method="POST">
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+<input
+type="text"
+name="phone"
+placeholder="Phone Number"
+required>
+
+<select name="meal">
+
+<option>Beans</option>
+<option>Burger</option>
+<option>Chicken</option>
+<option>Rice</option>
+
+</select>
+
+<br><br>
+
+<input
+type="number"
+name="quantity"
+min="1"
+value="1">
+
+<br><br>
+
+<button class="btn">
+Place Order
+</button>
+
+</form>
+
+</section>
+
+</body>
+</html>
